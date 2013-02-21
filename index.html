@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Puppy Trainer!!!</title>
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-unit">
+        <h1>
+          Hello. Yes, this is dog.
+        </h1>
+      </div>
+
+      <div id="user"></div>
+    </div>
+
+    <!-- TODO(david): Move this to different file in next week's talk. -->
+    <script id="user-template" type="text/x-handlebars-template">
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li>User name {{name}}</li>
+            <li>User score {{fraud_score}}</li>
+          </ul>
+        </div>
+      </div>
+    </script>
+
+    <!-- Third-party libraries -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js " type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js " type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js " type="text/javascript"></script>
+
+    <!-- Scripts -->
+    <script src="static/js/trainer.js" type="text/javascript"></script>
+    <script src="static/js/app.js" type="text/javascript"></script>
+  </body>
+</html>
