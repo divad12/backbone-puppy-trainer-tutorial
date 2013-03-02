@@ -1,18 +1,19 @@
 $(function() {
 
-  var user = new User({
-    name: 'Al capone'
-  });
+  var user = new User(window.userData);
 
-  // See http://backbonejs.org/#View-constructor
-  var userView = new UserView({
-    model: user,
-    el: '#user'
-  });
+  var userCollection = new UserCollection([window.userData, undefined, null, {}]);
+  var userCollectionView = new UserCollectionView({ el: '#users', collection: userCollection });
 
-  userView.render();
+  userCollectionView.render();
+
+  var progressView = new ProgressView({
+    el: '#progress',
+    users: userCollection
+  });
+  progressView.render();
 
   // NOTE: This is exposed globally for you to muck around in the console
-  window.user = user;
+  window.userCollection = userCollection;
 
 });
